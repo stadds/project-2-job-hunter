@@ -1,0 +1,34 @@
+{
+  "name": "job-hunter",
+  "version": "1.0.0",
+  "description": "Find and save jobs, add to do list for saved jobs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stadds/Project-2.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "sequelize",
+    "handlebars"
+  ],
+  "author": "Pia, Ted, Sam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stadds/Project-2/issues"
+  },
+  "homepage": "https://github.com/stadds/Project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.9"
+  }
+}
