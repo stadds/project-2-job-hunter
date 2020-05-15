@@ -6,12 +6,7 @@ branches:
 cache:
   directories:
     - node_modules
+services:
+  - mysql
 before_install:
   - mysql -e 'CREATE DATABASE job_hunter_db;'
-addons:
-  apt:
-   sources:
-    - mysql-5.7-trusty
-   packages:
-    - mysql-server
-    - mysql-client
