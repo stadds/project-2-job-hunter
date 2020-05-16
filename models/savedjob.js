@@ -43,6 +43,7 @@ module.exports = function (sequelize, DataTypes) {
 
   return SavedJob;
 };
+  
 
 // CREATE TABLE saved_jobs{
 //     id INT NOT NULL ,
