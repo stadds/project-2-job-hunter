@@ -34,6 +34,13 @@ module.exports = function (sequelize, DataTypes) {
     },
   });
 
+  SavedJob.associate = function (models){
+    SavedJob.hasMany(models.Todo,{
+      onDelete: "cascade"
+
+    });
+  };
+
   return SavedJob;
 };
 
