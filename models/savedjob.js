@@ -1,3 +1,4 @@
+// Jobs the user "saved" for later
 module.exports = function (sequelize, DataTypes) {
   const SavedJob = sequelize.define("SavedJob", {
     title: {

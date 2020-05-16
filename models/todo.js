@@ -1,3 +1,4 @@
+// ToDos for each job
 module.exports = function (sequelize, DataTypes) {
   const Todo = sequelize.define("Todo", {
     text: {
