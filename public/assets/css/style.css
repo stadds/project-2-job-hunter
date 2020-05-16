@@ -1,11 +1,11 @@
 :root {
-    font-size: ;
-    --primary: #;
+    font-size: 20px;
+    --primary: ;
     --secondary: #;
     --third: #;
     --fourth: #;
     --fifth: #;
-    --boxshadow: #;
+    --boxshadow: #00000047;
     --bodyfont: ;
     --jumbotronfont: ;
   }
