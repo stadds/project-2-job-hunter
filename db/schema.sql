@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS job_hunter_db;
+DROP DATABASE IF EXISTS job_hunter_db;
 
 CREATE DATABASE job_hunter_db;
 
