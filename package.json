@@ -4,8 +4,10 @@
   "description": "Find and save jobs, add to do list for saved jobs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "npm run lint",
     "start": "node server.js",
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint --fix .",
     "watch": "nodemon server.js"
   },
   "repository": {
