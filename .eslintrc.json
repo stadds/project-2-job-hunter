@@ -2,10 +2,12 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
-  "extends": "prettier",
-  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "rules": {
     "no-duplicate-case":"error",
     "no-empty":"error",
@@ -22,7 +24,7 @@
     "no-trailing-spaces": "error",
     "default-case": "error",
     "no-fallthrough": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
     "no-use-before-define": "error",
     "no-redeclare": "error",
     "camelcase": "error",
@@ -42,7 +44,6 @@
     "semi": [
         "error",
         "always"
-    ],
-    "prettier/prettier": "error"
+    ]
   }
 }
