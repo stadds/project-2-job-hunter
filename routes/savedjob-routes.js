@@ -13,4 +13,24 @@ module.exports = function (app) {
       res.json(dbSavedJob);
     });
   });
+
+  app.put("/api/savedjobs", function (req, res) {
+    db.SavedJob.update(req.body, {
+      where: {
+        id: req.body.id,
+      },
+    }).then(function (dbSavedJob) {
+      res.json(dbSavedJob);
+    });
+  });
+
+  app.delete("/api/savedjobs", function (req, res) {
+    db.SavedJob.destroy(req.body, {
+      where: {
+        id: req.body.id,
+      },
+    }).then(function (dbSavedJob) {
+      res.json(dbSavedJob);
+    });
+  });
 };
