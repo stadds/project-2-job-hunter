@@ -1,0 +1,427 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    background-color: #01051f;
+   text-align: center;
+    
+}
+
+
+
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("tech_crew.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-full-screen .middle-content-section {
+    text-align: center;
+    color: #fefefe;
+  }
+  
+  .hero-full-screen .top-content-section {
+    width: 100%;
+  }
+  
+  .middle-content-section .button-large {
+        padding: 8px;
+        border-radius: 12px;
+        background-color: #00171F;
+        color: #fff;
+        cursor: pointer;
+
+  }
+  
+
+  .hero-text-background {
+  background-color: #01051f;
+padding-left: 10px;
+padding-right: 10px;
+  }
+
+
+  .hero-banner {
+    text-align: center;
+
+  }
+  .hero-banner img {
+    max-width: 100%;
+
+  }
+
+  .right-image {
+  width: 60%;
+  float: right;
+  padding-bottom: 30px;
+  }
+  .form {
+display: inline-flex;
+
+  }
+  .search-form {
+   display: flex !important; 
+   justify-content: center !important;
+   align-items: center !important;
+   padding: 20px !important;
+  }
+
+  .search-field {
+   height: 40px;
+   padding: 10px;
+
+  }
+ 
+  .jobs {
+    width: 200px;
+  }
+  
+  .location {
+    width: 200px;
+  }
+
+  .search-button {
+    height: 45px;
+    width: 110px;
+    background-color: #00171F;
+    color: #fff;
+  }
+  
+  .search-button:hover {
+    background-color: #00171F;
+    cursor: pointer;
+
+  }
+
+  
+
+.block-list {
+  width: 100%;
+  line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #fefefe;
+}
+
+.block-list a {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #1779ba;
+}
+
+
+.block-list, .block-list ul {
+  list-style-type: none;
+}
+
+.block-list ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.block-list ul li {
+  height: 4.0625rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-list li > input[type="checkbox"], .block-list li > input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.block-list li > input[type="checkbox"] + label, .block-list li > input[type="radio"] + label {
+  margin: 0;
+  margin-left: 0.5rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.block-list li > input[type="checkbox"] + label.list-header, .block-list li > input[type="radio"] + label.list-header {
+  margin: 0;
+}
+
+.block-list li > input[type="checkbox"]:checked + label::before, .block-list li > input[type="radio"]:checked + label::before {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c";
+  background-size: 100% 100%;
+  width: 1.5em;
+  height: 1.5em;
+  color: #1779ba;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1rem;
+  pointer-events: none;
+}
+
+.block-list .switch {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  margin: 0;
+}
+
+.block-list li {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.block-list li p {
+  margin: 0;
+}
+
+.block-list .section-header-bg {
+  width: 100%;
+  height: 1.25rem;
+  border-bottom: none;
+  border-top: none;
+  color: #fefefe;
+}
+
+.block-list .section-header-bg p {
+  z-index: 10;
+}
+
+.block-list .section-header-bg.gray {
+  background: #cacaca;
+}
+
+.block-list .section-header-bg.gray:before {
+  content: '';
+  height: 1.25rem;
+  position: absolute;
+  width: 1.25rem;
+  background: #cacaca;
+  left: -rem-calc(20);
+}
+
+.block-list .section-header-bg.gray:after {
+  content: '';
+  height: 1.25rem;
+  position: absolute;
+  width: 1.25rem;
+  background: #cacaca;
+  right: -rem-calc(20);
+}
+
+.block-list.block-list-short {
+  margin-top: 2rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.block-list.block-list-short li {
+  height: 2.5rem;
+}
+
+.block-list.block-list-padded {
+  padding: 0 1.25rem;
+}
+
+.block-list.block-list-padded p {
+  margin-left: 0;
+}
+
+.block-list.with-icons li > a, .block-list.with-icons li > span, .block-list.with-icons li > label {
+  padding-left: 8.925rem;
+}
+
+.block-list.with-icons li img, .block-list.with-icons li .iconic {
+  position: absolute;
+  top: 0.08;
+  left: 0.08;
+  width: 0.64;
+  height: 0.64;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.block-list header {
+  padding-left: 0.75rem;
+  padding-bottom: 0.5rem;
+  height: 45px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: default;
+  background-color: #e6e6e6;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.block-list li {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.block-list li label {
+  color: #0a0a0a;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.block-list li input, .block-list li select {
+  margin: 0;
+}
+
+.block-list li button {
+  padding: 1rem;
+}
+
+.block-list li button img {
+  margin: 0;
+}
+
+.block-list li:first-child {
+  border-top: none;
+}
+
+.block-list li > a,
+.block-list li > span,
+.block-list li > label {
+  margin-bottom: 0;
+}
+
+.block-list li p {
+  margin-bottom: 0;
+}
+
+.block-list li > span {
+  cursor: default;
+}
+
+.block-list li > a, .block-list li > label {
+  cursor: pointer;
+}
+
+.block-list li.block-list-time-item {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.block-list li.block-list-time-item div:first-of-type {
+  border-right: 1px solid #1779ba;
+  padding-right: 1.25rem;
+  margin-right: 0.625rem;
+}
+
+.block-list li .list-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-list li .list-form label {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  text-align: right;
+  color: #4D4D4E;
+  font-weight: 400;
+}
+
+.block-list li .list-form [type="text"], .block-list li .list-form [type="tel"] {
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.block-list li p {
+  margin-left: 0.5rem;
+}
+
+.block-list li.list-header-selected {
+  padding: 1.25rem 2rem 1.25rem;
+  border: none;
+}
+
+.block-list li.with-chevron::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  display: block;
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 1em;
+  color: #8a8a8a;
+}
+  .block-list {
+   text-align: center;
+   text: white;
+
+  }
+
+
+
+
+.block-list li .block-list-label {
+  display: inline-block;
+  float: right;
+  padding: 0;
+  pointer-events: none;
+}
+
+.block-list-item-highlight span,
+.block-list-item-highlight p {
+  color: #1779ba;
+}
+
+.right-image h3 {
+  text-align: center;
+}
+
+
+ h5 {
+  text-align: center;
+  
+ }
+
+ 
