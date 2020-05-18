@@ -7,6 +7,7 @@ module.exports = function (app) {
     db.Todo.create({
       text: req.body.text,
       complete: req.body.complete,
+      SavedJobId: req.body.SavedJobId
     }).then(function (dbTodo) {
       res.json(dbTodo);
     });
