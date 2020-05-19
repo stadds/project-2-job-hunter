@@ -1,103 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job Hunter</title>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Job Hunter</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css"
-      integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="top-bar" style="background-color: #01051f;">
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><button type="button" class="button">Saved Jobs</button></li>
-        </ul>
-      </div>
-    </div>
-    <br />
-    <div class="hero-banner">
-      <img src="jobhunter.png" />
-    </div>
-
-    <div class="search-form">
-      <form>
-        <div class="form-holder">
-          <input
-            class="search-field jobs"
-            name="search"
-            type="text"
-            placeholder="Jobs, Keywords"
-          />
-          <input
-            class="search-field location"
-            name="location"
-            type="text"
-            placeholder="Location"
-          />
-
-          <button class="search-button" type="button">Search</button>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="top-bar" style="background-color: #01051f;">
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li>
+                        <button type="button" class="button">Saved Jobs</button>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </form>
-    </div>
-
-    <div class="row">
-      <div class="large-4 columns">
-        <div class="left-container">
-          <div class="tech-heading">
-            <h5>New Careers In Tech!</h5>
-          </div>
-          <section class="block-list" style="background-color: #007ea7;">
-            <header style="background-color: #003459;">Job Listings</header>
-            <ul>
-              <li>
-                <p class="list-subheader dark">
-                  Sr. Web Developer position available
-                </p>
-              </li>
-              <li>
-                <p class="list-subheader dark">
-                  UX Designer position available
-                </p>
-              </li>
-              <li>
-                <p class="list-subheader dark">
-                  Graphic Designer position available
-                </p>
-              </li>
-            </ul>
-          </section>
+        <br/>
+        <div class="hero-banner">
+            <img src="jobhunter.png"/>
         </div>
-      </div>
+        <div class="row" style="padding: 1em;">
+            <form>
 
-      <div class="large-8 columns">
-        <div class="right-container">
-          <div class="right-image">
-            <h3>Find Your Path</h3>
-            <img src="dreamstime_s_80162093-1.jpg" />
-          </div>
+                <div class="medium-5 columns">
+
+                    <input  name="search" type="text" placeholder="Jobs, Keywords"/>
+                </div>
+                <div class=" medium-5 columns">
+                    <input  name="location" type="text" placeholder="Location"/>
+
+
+                </div>
+                <div class="medium-2 columns">
+
+                    <button class="search-button" type="button">Search</button>
+
+                </div>
+
+
+            </form>
         </div>
-      </div>
-    </div>
+        <div class="search-form"></div>
 
-    <footer class="footer">
-      <div class="text-footer">
-        <a href="jobhunter.com" style="color: white;">JOB HUNTER</a>
-      </div>
-    </footer>
+        <div class="row">
+            
+        </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+        <footer class="footer">
+            <div class="text-footer">
+                <a href="jobhunter.com" style="color: white;">JOB HUNTER</a>
+            </div>
+        </footer>
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
 </html>
