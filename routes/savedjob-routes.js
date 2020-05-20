@@ -8,6 +8,9 @@ module.exports = function (app) {
       title: req.body.title,
       description: req.body.description,
       url: req.body.url,
+      location: req.body.location,
+      company: req.body.company,
+      type: req.body.type,
       userid: req.sessionID,
     }).then(function (dbSavedJob) {
       res.json(dbSavedJob);
