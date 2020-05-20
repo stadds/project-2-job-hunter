@@ -2,6 +2,7 @@
 // =========================================
 const express = require("express");
 const session = require("express-session");
+const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 8080;
@@ -24,7 +25,7 @@ app.set("view engine", "handlebars");
 app.use(
   session({
     genid: function (req) {
-      return genuuid(); // use UUIDs for session IDs
+      return uuidv4(); // use UUIDs for session IDs
     },
     secret: process.env.SESSION_SECRET,
     resave: true,
@@ -37,7 +38,6 @@ app.use(
 // =================================================================
 require("./routes/html-routes.js")(app);
 require("./routes/savedjob-routes.js")(app);
-
 
 // START
 // =================================================================

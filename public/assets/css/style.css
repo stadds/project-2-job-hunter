@@ -1,11 +1,113 @@
 :root {
-    font-size: 20px;
-    --primary: ;
-    --secondary: #;
-    --third: #;
-    --fourth: #;
-    --fifth: #;
-    --boxshadow: #00000047;
-    --bodyfont: ;
-    --jumbotronfont: ;
-  }
+  font-size: 20px;
+  --primary: ;
+  --secondary: #;
+  --third: #;
+  --fourth: #;
+  --fifth: #;
+  --boxshadow: #00000047;
+  --bodyfont: ;
+  --jumbotronfont: ;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  line-height: 60px;
+  background-color: #01051f;
+  text-align: center;
+}
+
+.hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: url("tech_crew.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+h5 {
+  text-align: center;
+}
+
+.hero-full-screen .middle-content-section {
+  text-align: center;
+  color: #fefefe;
+}
+
+.hero-full-screen .top-content-section {
+  width: 100%;
+}
+
+.middle-content-section .button-large {
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #00171f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hero-text-background {
+  background-color: #01051f;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.hero-banner {
+  text-align: center;
+}
+
+.hero-banner img {
+  max-width: 100%;
+}
+
+.right-image {
+  width: 60%;
+  float: right;
+  padding-bottom: 30px;
+}
+
+.form {
+  display: inline-flex;
+}
+
+.search-form {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px !important;
+}
+
+.jobs {
+  width: 200px;
+}
+
+.location {
+  width: 200px;
+}
+
+.search-button {
+  height: 45px;
+  width: 110px;
+  background-color: #00171f;
+  color: #fff;
+}
+
+.search-button:hover {
+  background-color: #00171f;
+  cursor: pointer;
+}
+
+.right-image h3 {
+  text-align: center;
+}
