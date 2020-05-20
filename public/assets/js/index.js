@@ -20,6 +20,9 @@ function renderHTML(jobsData) {
     let $type = $("<p>").addClass("job-type").text(jobsData[i].type);
     $callout.append($type);
 
+    let $loc = $("<p>").addClass("job-loc").text(jobsData[i].location);
+    $callout.append($loc);
+
     let tmpDesc = jobsData[i].description.replace(/<[^>]*>/g, "");
     let $desc = $("<p>").addClass("job-desc").text(tmpDesc);
     $callout.append($desc);
@@ -37,6 +40,25 @@ function renderHTML(jobsData) {
     $("#search-results").append($col);
   }
 }
+function savedaJob() {
+  //event.preventDefault();
+  console.log("save-btn");
+  console.log($(this));
+  let jobsData = {
+    title: $(this).siblings(".job-title").text().trim(),
+    description: $(this).siblings(".job-desc").text().trim(),
+    url: $(this).siblings(".git-url").attr("href").trim(),
+    location: $(this).siblings(".job-loc").text().trim(),
+    company: $(this).siblings(".job-comp").text().trim(),
+    type: $(this).siblings(".job-type").text().trim(),
+  };
+  console.log(jobsData);
+
+  $.post("/api/savedjobs", jobsData).then(function (data) {
+    console.log(data);
+  });
+  $(this).addClass("disabled").text("Saved");
+}
 $(document).ready(function () {
   $(".search-jobs").on("submit", function (event) {
     event.preventDefault();
@@ -51,6 +73,7 @@ $(document).ready(function () {
     }).then(renderHTML);
   });
 });
+$(document).on("click", ".save-btn", savedaJob);
 
 // //
 // <div class="column">
