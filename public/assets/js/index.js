@@ -1,29 +1,38 @@
 //to hold the 3rd party search api call
 function renderHTML(jobsData) {
-$("#search-results").empty();
+  $("#search-results").empty();
+  console.log(jobsData);
 
   for (let i = 0; i < jobsData.length; i++) {
     let $col = $("<div>").addClass("column");
-    let $callout = $("div").addClass("callout");
+    let $callout = $("<div>").addClass("callout");
     $col.append($callout);
 
-    let $title = $("<p>").addClass("lead").text(jobsData[i].title);
+    let $title = $("<p>").addClass("lead job-title").text(jobsData[i].title);
     $callout.append($title);
 
     let $company = $("<p>")
-      .addClass("subheader")
+      .addClass("subheader job-comp")
       .text(jobsData[i].company)
-      .html("<hr>");
+      .append("<hr>");
     $callout.append($company);
 
-    let $type = $("<p>").text(jobsData[i].type);
+    let $type = $("<p>").addClass("job-type").text(jobsData[i].type);
     $callout.append($type);
 
+    let tmpDesc = jobsData[i].description.replace(/<[^>]*>/g, "");
+    let $desc = $("<p>").addClass("job-desc").text(tmpDesc);
+    $callout.append($desc);
+
     let $url = $("<a>")
+      .addClass("git-url")
       .attr({ href: jobsData[i].url, target: "_blank" })
-      .text("Apply Here");
+      .text("Apply Here")
+      .append("<br>");
     $callout.append($url);
-    $callout.append("<button type='button' class='button'> Save Job!</button>");
+    $callout.append(
+      "<button type='button' class='button save-btn' style='margin-top:.5em;'>Save Job!</button>"
+    );
 
     $("#search-results").append($col);
   }
