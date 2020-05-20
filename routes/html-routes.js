@@ -7,10 +7,15 @@ module.exports = function (app) {
   });
 
   app.get("/savedjobs", async function (req, res) {
-    const jobLists = await db.SavedJob.findAll(
-      { where: { userid: req.sessionID } },
-      { include: db.Todo }
-    );
+    const jobLists = await db.SavedJob.findAll({
+      where: { userid: req.params.id },
+      include: [
+        {
+          model: db.Todo,
+          required: false,
+        },
+      ],
+    });
     res.render("savedjobs", jobLists);
   });
 };
