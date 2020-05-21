@@ -3,11 +3,18 @@ const db = require("../models");
 
 module.exports = function (app) {
   app.get("/", function (req, res) {
-    res.render("index");
+    let hbsObject = {};
+    hbsObject.title = "Search Jobs";
+    hbsObject.navs = [{ url: "/savedjobs", name: "Saved Jobs" }];
+    res.render("index", hbsObject);
   });
 
   app.get("/savedjobs", async function (req, res) {
-    const jobLists = await db.SavedJob.findAll({
+    let hbsObject = {};
+    hbsObject.title = "Saved Job";
+    hbsObject.navs = [{ url: "/", name: "Search Jobs" }];
+
+    let results = await db.SavedJob.findAll({
       where: { userid: req.sessionID },
       include: [
         {
@@ -16,6 +23,11 @@ module.exports = function (app) {
         },
       ],
     });
-    res.render("savedjobs", jobLists);
+
+    let jsonResults = JSON.stringify(results);
+
+    hbsObject.jobLists = JSON.parse(jsonResults);
+
+    res.render("savedjobs", hbsObject);
   });
 };
