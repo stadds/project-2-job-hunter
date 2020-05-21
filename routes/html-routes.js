@@ -8,7 +8,7 @@ module.exports = function (app) {
 
   app.get("/savedjobs", async function (req, res) {
     const jobLists = await db.SavedJob.findAll({
-      where: { userid: req.params.id },
+      where: { userid: req.sessionID },
       include: [
         {
           model: db.Todo,
