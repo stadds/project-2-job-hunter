@@ -65,8 +65,15 @@ $(document).ready(function () {
     console.log("here");
     let searchKeyword = encodeURIComponent($("#keywords").val().trim());
     let searchLocation = encodeURIComponent($("#location").val().trim());
+
     console.log(encodeURIComponent(searchKeyword));
     console.log(encodeURIComponent(searchLocation));
+
+    if (searchKeyword === "" || searchLocation === "") {
+      console.log("empty search");
+      return;
+    }
+
     $.ajax({
       url: `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${searchKeyword}&location=${searchLocation}&page=1`,
       method: "GET",
