@@ -1,1 +1,30 @@
- 
+ <div class="row small-up-1 medium-up-2 large-up-3">
+    {{#each jobLists}}
+    <div class="column">
+        <div class="card" data-savedid="{{id}}" data-applied="{{applied}}">
+            <div class="card-divider" style="text-align: center;">
+                {{title}}
+            </div>
+            <div class="card-section">
+                <p>{{company}}</p>
+                <a href="{{url}}" target="_blank">Apply here</a>
+                <form class="enter-todo">
+                    <input type="text" placeholder="Enter Todo" />
+                </form>
+
+                <ul class="list-group">
+                    {{#each Todos}}
+                    <li class="list-group-item" data-todoid="{{id}}" data-complete="{{complete}}">{{text}}
+                        <span><button class='button tiny btn-complete'>✓</button></span>
+                    </li>
+                    {{/each}}
+                </ul>
+
+            </div>
+            <div class="card-divider">
+                <button type="button" class="apply-btn button">Apply</button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
