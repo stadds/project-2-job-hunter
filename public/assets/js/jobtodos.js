@@ -22,6 +22,8 @@ function savedtoDo() {
     console.log(data);
     location.reload();
   });
+
+  $(this).children("input").val("");
 }
 function completeTodo() {
   console.log("btn-complete");
