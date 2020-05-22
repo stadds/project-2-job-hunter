@@ -7,24 +7,29 @@ module.exports = function (app) {
     db.Todo.create({
       text: req.body.text,
       complete: req.body.complete,
-      SavedJobId: req.body.SavedJobId
+      SavedJobId: req.body.SavedJobId,
     }).then(function (dbTodo) {
       res.json(dbTodo);
     });
   });
 
-  app.put("/api/todos", function (req, res) {
-    db.Todoo.update(req.body, {
-      where: {
-        id: req.body.id,
+  app.put("/api/todos/:id", function (req, res) {
+    db.Todo.update(
+      {
+        complete: req.body.complete,
       },
-    }).then(function (dbTodo) {
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    ).then(function (dbTodo) {
       res.json(dbTodo);
     });
   });
 
   app.delete("/api/todos", function (req, res) {
-    db.Todoo.destroy(req.body, {
+    db.Todo.destroy(req.body, {
       where: {
         id: req.body.id,
       },
