@@ -38,6 +38,7 @@ app.use(
 // =================================================================
 require("./routes/html-routes.js")(app);
 require("./routes/savedjob-routes.js")(app);
+require("./routes/todo-routes.js")(app);
 
 // START
 // =================================================================
