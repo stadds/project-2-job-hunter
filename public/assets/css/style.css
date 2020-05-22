@@ -1,13 +1,17 @@
 :root {
   font-size: 20px;
-  --primary: ;
-  --secondary: #;
-  --third: #;
-  --fourth: #;
+  --primary: #01051f;
+  --secondary: #007ea7;
+  --third: #003459;
+  --fourth: #00a8e8;
   --fifth: #;
   --boxshadow: #00000047;
-  --bodyfont: ;
+  --bodyfont: 'Quicksand', sans-serif;;
   --jumbotronfont: ;
+}
+
+body{
+  font-family: var(--bodyfont);
 }
 
 .footer {
@@ -16,6 +20,29 @@
   line-height: 60px;
   background-color: #01051f;
   text-align: center;
+}
+
+.callout{
+  font-size: .8em;
+  box-shadow: 0 5px 5px 0 var(--boxshadow), 0 4px 5px 0 var(--boxshadow);
+}
+
+.button{
+  background-color: var(--fourth);
+}
+
+hr.rounded-line{
+  border: 6px solid var(--fourth);
+  border-radius: 5px;
+}
+
+.card{
+  box-shadow: 0 5px 5px 0 var(--boxshadow), 0 4px 5px 0 var(--boxshadow);
+}
+
+.card-divider{
+  background-color: var(--third);
+  color: white;
 }
 
 .hero-full-screen {
@@ -34,10 +61,6 @@
   justify-content: space-between;
   background: url("tech_crew.jpg") center center no-repeat;
   background-size: cover;
-}
-
-h5 {
-  text-align: center;
 }
 
 .hero-full-screen .middle-content-section {
@@ -100,12 +123,12 @@ h5 {
 .search-button {
   height: 45px;
   width: 110px;
-  background-color: #00171f;
+  background-color: var(--primary);
   color: #fff;
 }
 
 .search-button:hover {
-  background-color: #00171f;
+  background-color: var(--fourth);
   cursor: pointer;
 }
 
@@ -124,6 +147,8 @@ h5 {
   overflow: hidden;
   color: #0a0a0a;
 }
+
+
 
 .list-group > :last-child {
   margin-bottom: 0;
@@ -173,10 +198,14 @@ h5 {
 .btn-complete {
   /* float: right; */
   align-self: right;
-  height: 25px;
+  /* height: 25px; */
   margin: 5px;
   border-radius: 0.5em;
-  background-color: green;
+  background-color: var(--fourth);
+}
+
+.btn-complete.disabled{
+  background-color: var(--primary);
 }
 
 .todo-done{
